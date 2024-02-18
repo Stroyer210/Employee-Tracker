@@ -48,14 +48,14 @@ Then you can show it on the left side and you can delete it anytime you want. En
 ## Credits :email:
 
 List of all the links that made me succeed this project:
-- https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
-- https://stackoverflow.com/questions/29775797/fetch-post-json-data
-- https://getbootstrap.com/
-- https://dev.to/mohammedasker/dealing-with-json-is-not-a-function-error-1apn
-- https://stackoverflow.com/questions/75148245/uncaught-promise-with-createreadstream
-- https://stackoverflow.com/questions/52067788/failed-to-load-resource-neterr-connection-refused-nodejs
-- https://forum.freecodecamp.org/t/http-method-delete-doesnt-work/462225
-- https://www.reddit.com/r/nextjs/comments/13bs9ix/delete_api_calls_wont_work_anymore/
+- https://dev.mysql.com/doc/refman/8.0/en/problems-with-null.html#:~:text=To%20look%20for%20NULL%20values,See%20Section%205.3.
+- https://www.w3schools.com/sql/func_mysql_case.asp 
+- https://www.geeksforgeeks.org/sql-join-set-1-inner-left-right-and-full-joins/
+- https://learn.microsoft.com/en-us/sql/t-sql/queries/select-transact-sql?view=sql-server-ver16
+- https://www.digitalocean.com/community/tutorials/nodejs-interactive-command-line-prompts
+- https://stackoverflow.com/questions/66658612/nodejs-set-variable-inside-switch-statement-then-pass-it-to-axios
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch
+- 
 
 ## License :memo:
 ---
