@@ -55,7 +55,12 @@ List of all the links that made me succeed this project:
 - https://www.digitalocean.com/community/tutorials/nodejs-interactive-command-line-prompts
 - https://stackoverflow.com/questions/66658612/nodejs-set-variable-inside-switch-statement-then-pass-it-to-axios
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch
-- 
+- https://developer.mozilla.org/en-US/docs/Web/API/console/table_static
+- https://stackoverflow.com/questions/75175085/typeerror-cannot-read-properties-of-undefined-reading-status-in-axios
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+- https://www.w3schools.com/sql/sql_orderby.asp
+- https://stackoverflow.com/questions/19544452/remove-last-item-from-array
+- https://javascript.plainenglish.io/how-to-inquirer-js-c10a4e05ef1f
 
 ## License :memo:
 ---
