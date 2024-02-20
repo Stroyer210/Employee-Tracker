@@ -164,7 +164,7 @@ viewEmployees = () => {
 
 //Function to view employees by Manager
 viewByManager = () => {
-    const sql = `SELECT employee.id, CONCAT(manager.first_name, ' ', manager.last_name) AS manager, employee.first_name AS Employee_first_name, employee.last_name AS Employee_last_name, role.title AS role , department.name AS department, role.salary
+    const sql = `SELECT employee.id, CONCAT(manager.first_name, ' ', manager.last_name) AS manager, CONCAT(employee.first_name, ' ', employee.last_name) AS Employee, role.title AS role , department.name AS department, role.salary
     FROM employee
     LEFT JOIN employee manager ON employee.manager_id = manager.id 
     JOIN role ON employee.role_id = role.id
@@ -183,7 +183,7 @@ viewByManager = () => {
 
 //Function fo view employees by Department
 viewByDepartment = () => {
-    const sql = `SELECT employee.id, department.name AS department, employee.first_name AS Employee_first_name, employee.last_name AS Employee_last_name, role.title AS role , role.salary, CONCAT(manager.first_name, ' ', manager.last_name) AS manager
+    const sql = `SELECT employee.id, department.name AS department, CONCAT(employee.first_name, ' ', employee.last_name) AS Employee, role.title AS role , role.salary, CONCAT(manager.first_name, ' ', manager.last_name) AS manager
     FROM employee
     LEFT JOIN employee manager ON employee.manager_id = manager.id 
     JOIN role ON employee.role_id = role.id
@@ -358,7 +358,7 @@ updateEmployeeRole = () => {
         if (answers.role === "back") {
             // check if user selected "back"
             roleList.pop();
-            console.log("Changes were not saved!")
+            console.log(`${red}Changes were not saved!❌`)
             promptUser();
             return;
         }
