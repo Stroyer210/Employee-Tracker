@@ -61,6 +61,10 @@ List of all the links that made me succeed this project:
 - https://www.w3schools.com/sql/sql_orderby.asp
 - https://stackoverflow.com/questions/19544452/remove-last-item-from-array
 - https://javascript.plainenglish.io/how-to-inquirer-js-c10a4e05ef1f
+- https://github.com/dominikwilkowski/cfonts
+- https://github.com/dominikwilkowski/cfonts?tab=readme-ov-file
+- https://gist.github.com/abritinthebay/d80eb99b2726c83feb0d97eab95206c4
+- https://github-emoji-picker.rickstaa.dev/
 
 ## License :memo:
 ---
