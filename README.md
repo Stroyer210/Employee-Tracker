@@ -12,7 +12,7 @@ Employee Tracker is a command-line application built using MySQL and Inquirer. I
 
 You are able to check this app by two ways:
 
- 1. If you want to check a video of the functionality of the app, you can go to this URL:
+ 1. If you want to check a video of the functionality of the app, you can go to this URL: https://drive.google.com/file/d/1IkUFSgyw0KmJJ_YRdgSe5gWlImhIEvTu/view 
  2. If you want to try it yourself, you have to have "Node.js" installed in your computer, then you have to clone my repository and run it locally.
 
 ## Usage :bar_chart:
