@@ -2,10 +2,13 @@
 const express = require('express');
 const inquirer = require('inquirer');
 const mysql = require('mysql2');
+const cfonts = require('cfonts');
 
 // Declaring the PORT variable
 const PORT = process.env.PORT || 3001;
-
+const green = "\x1b[32m";
+const red = "\x1b[31m";
+const yellow = "\x1b[33m";
 
 // Initializing express
 const app = express();
@@ -25,10 +28,22 @@ const db = mysql.createConnection(
     console.log(`Connected to the employees_db database.`)
     );
 
-console.log(`
- ------------------
-| EMPLOYEE TRACKER |
- ------------------`);
+//Function that shows the title of the app
+cfonts.say('SQL Employee Tracker', {
+	font: 'block',              // define the font face
+	align: 'center',              // define text alignment
+	colors: ['white'],         // define all colors
+	background: 'transparent',  // define the background color, you can also use `backgroundColor` here as key
+	letterSpacing: 1,           // define letter spacing
+	lineHeight: 1,              // define the line height
+	space: true,                // define if the output text should have empty lines on top and on the bottom
+	maxLength: '0',             // define how many character can be on one line
+	gradient: false,            // define your two gradient colors
+	independentGradient: false, // define if you want to recalculate the gradient for each new line
+	transitionGradient: false,  // define if this is a transition between colors directly
+	env: 'node'                 // define the environment cfonts is being executed in
+});
+
 promptUser = () => {
     inquirer
     .prompt([
@@ -79,7 +94,20 @@ promptUser = () => {
                 viewTotalBudget();
                 break;
             case 'Quit':
-                console.log("Good-Bye!")
+                cfonts.say('GOOD BYE!', {
+                    font: 'block',              // define the font face
+                    align: 'center',              // define text alignment
+                    colors: ['white'],         // define all colors
+                    background: 'transparent',  // define the background color, you can also use `backgroundColor` here as key
+                    letterSpacing: 1,           // define letter spacing
+                    lineHeight: 1,              // define the line height
+                    space: true,                // define if the output text should have empty lines on top and on the bottom
+                    maxLength: '0',             // define how many character can be on one line
+                    gradient: false,            // define your two gradient colors
+                    independentGradient: false, // define if you want to recalculate the gradient for each new line
+                    transitionGradient: false,  // define if this is a transition between colors directly
+                    env: 'node'                 // define the environment cfonts is being executed in
+                });
                 db.end();
                 break;
         };
@@ -134,6 +162,7 @@ viewEmployees = () => {
     });
 };
 
+//Function to view employees by Manager
 viewByManager = () => {
     const sql = `SELECT employee.id, CONCAT(manager.first_name, ' ', manager.last_name) AS manager, employee.first_name AS Employee_first_name, employee.last_name AS Employee_last_name, role.title AS role , department.name AS department, role.salary
     FROM employee
@@ -152,6 +181,7 @@ viewByManager = () => {
     });
 };
 
+//Function fo view employees by Department
 viewByDepartment = () => {
     const sql = `SELECT employee.id, department.name AS department, employee.first_name AS Employee_first_name, employee.last_name AS Employee_last_name, role.title AS role , role.salary, CONCAT(manager.first_name, ' ', manager.last_name) AS manager
     FROM employee
@@ -188,7 +218,7 @@ addDepartment = () => {
           res.status(500).json({ error: err.message });
            return;
         }
-        console.log(`${answers.department} has been added to the database.`);
+        console.log(`${green}${answers.department} has been added to the database.🏬`);
         promptUser();
       });
     });
@@ -228,7 +258,7 @@ addRole = () => {
           res.status(500).json({ error: err.message });
            return;
         }
-        console.log(`${answers.title} has been added to the database.`);
+        console.log(`${green}${answers.title} has been added to the database.💼`);
         promptUser();
         });
     });
@@ -286,7 +316,7 @@ addEmployee = () => {
                   res.status(500).json({ error: err.message });
                    return;
                 }
-                console.log(`${answers['first-name']} ${answers['last-name']} has been added to the database.`);
+                console.log(`${green}${answers['first-name']} ${answers['last-name']} has been added to the database.👔`);
                 promptUser();
                 });
             });
@@ -340,7 +370,7 @@ updateEmployeeRole = () => {
           res.status(500).json({ error: err.message });
            return;
         }
-        console.log(`Employee's role has been updated`);
+        console.log(`${yellow}Employee's role has been updated.🎊`);
         promptUser();
         });
     });
@@ -375,7 +405,7 @@ updateEmployeeManager = () => {
         if (answers.manager === "back") {
             // check if user selected "back"
             employeeList.pop();
-            console.log("Changes were not saved!")
+            console.log(`${red}Changes were not saved!❌`)
             promptUser();
             return;
         }
@@ -387,13 +417,14 @@ updateEmployeeManager = () => {
           res.status(500).json({ error: err.message });
            return;
         }
-        console.log(`Employee's manager has been updated`);
+        console.log(`${yellow}Employee's manager has been updated.🎊`);
         promptUser();
         });
     });
     });
 };
-// Delete data 
+
+//Functions to delete data 
 deleteData = () =>{
     inquirer
     .prompt([
@@ -452,7 +483,7 @@ deleteEmployee = () => {
                          return;
                       }
                       employeeList.pop();
-                      console.log(`Employee with ID #${answers.id} has been deleted from the database.`);
+                      console.log(`${red}Employee with ID #${answers.id} has been deleted from the database.🗑️`);
                       promptUser();
                       });
             })
@@ -489,7 +520,7 @@ deleteRole = () => {
                          return;
                       }
                       roleList.pop();
-                      console.log(`Role with ID #${answers.id} has been deleted from the database.`);
+                      console.log(`${red}Role with ID #${answers.id} has been deleted from the database.🗑️`);
                       promptUser();
                       });
             })
@@ -526,7 +557,7 @@ deleteDepartment = () => {
                          return;
                       }
                       departmentList.pop();
-                      console.log(`Department with ID #${answers.id} has been deleted from the database.`);
+                      console.log(`${red}Department with ID #${answers.id} has been deleted from the database.🗑️`);
                       promptUser();
                       });
             })
@@ -563,8 +594,13 @@ viewTotalBudget = () => {
            return;
         }
         const totalBudget = res[0]["total_budget"];
-        console.log(`The total burget for employees in this department is $${totalBudget}`);
+        if(totalBudget === undefined ){
+            console.log(`${yellow}The total burget for employees in this department is $0.💵`);
         promptUser();
+        }else{
+            console.log(`${yellow}The total burget for employees in this department is $${totalBudget}.💵`);
+            promptUser();
+        }
         });
     });
     });
