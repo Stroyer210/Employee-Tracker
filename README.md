@@ -2,14 +2,12 @@
 ![Static Badge](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&labelColor=black)
 ![Static Badge](https://img.shields.io/badge/MySQL%20-%20%234479A1?style=for-the-badge&logo=mysql&logoColor=%234479A1&labelColor=white)
 ![Static Badge](https://img.shields.io/badge/Node.js-%23339933?style=for-the-badge&logo=node.js&labelColor=black)
-![Static Badge](https://img.shields.io/badge/Express%20-%20black?style=for-the-badge&logo=Express&logoColor=white&labelColor=black&color=white)
 
 ![Static Badge](https://img.shields.io/badge/MIT-%2316A5F3?style=for-the-badge&label=License)
 
-
-
 ## Description  :bookmark_tabs:
-
+Employee Tracker project was particularly rewarding; as soon as I realized what this project was I got really excited because because it addresses a real-world need that many companies face. Despite its simplicity, the application has the potential to significantly improve the efficiency of employee management processes. Moreover, I enjoyed the process of developing and styling the CLI interface, adding a creative touch to the project, such a bigger title, colors, emojis. 
+Employee Tracker is a command-line application built using MySQL and Inquirer. It serves as a simple yet efficient tool for managing employee data within a company. With features such as adding, viewing, updating, and deleting employee records/data, as well as managing departments and roles, the application streamlines the process of employee management. I learned a lot of things throughout this project, some of those are having experience in setting up and managing a MySQL database, creating tables, defining relationships between them, error handling, styling the command-line interface (CLI) and way more. Overall, I am proud of the practical utility and user-friendly design of my application.
 ## Installation :computer:
 
 You are able to check this app by two ways:
@@ -19,32 +17,28 @@ You are able to check this app by two ways:
 
 ## Usage :bar_chart:
 
-If you want to try the app yourself make sure you have "Node.js" in your computer, and do not forget to run the next lines of code before opening the app:
+If you want to try the app yourself make sure you have "Node.js" in your computer, and do not forget to run the next lines of code to start the app:
     
     npm i
 
  
- ![Running the first code.](public/images/screen1.png)
+ ![Running the first code.](images/employee1.png)
  ---
-After that run one of the next lines:
+After that run one of the next line:
 
     npm start
 
- ![Running the next line.](public/images/screen2.png)
+ ![Running the next line.](images/employee2.png)
  ---
-Either you open the app locally or throw my deployed application, you will see the homepage first:
+You will be prompted with a title of the app and a list of options to choose, after selecting the action you want to process, either it will show you right away like the next example: 
 
- ![Running the next line.](public/images/screen3.png)
+ ![Example of tables.](images/employee3.png)
  ---
-After clicking "Get Started" you can start typing your note and a description to it.
+Or it will ask you a couple questios to finalize the request:
 
- ![Running the next line.](public/images/screen4.png)
+ ![Running the next line.](images/employee4.png)
  ---
-Then you can show it on the left side and you can delete it anytime you want. Enjoy it!
-
- ![Running the next line.](public/images/screen5.png)
- ---
-
+You can select "Quit" so the app will shut down.
 ## Credits :email:
 
 List of all the links that made me succeed this project:
